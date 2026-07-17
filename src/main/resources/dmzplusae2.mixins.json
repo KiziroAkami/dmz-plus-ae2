@@ -4,7 +4,9 @@
   "package": "com.kiziro.dmzplusae2.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "dmzplusae2.refmap.json",
-  "mixins": [],
+  "mixins": [
+    "MeteoriteStructureMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {
