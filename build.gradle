@@ -170,6 +170,8 @@ dependencies {
 
     // Applied Energistics 2 — the other side of this compat mod.
     implementation fg.deobf("appeng:appliedenergistics2-forge:15.4.10")
+    // AE2 15.4.x's mandatory guide library (Maven Central) — dev runtime only.
+    runtimeOnly fg.deobf("org.appliedenergistics:guideme:20.1.15")
 
     // DMZ's mandatory companions (mods.toml mandatory=true) — required for runClient.
     // Versions/coordinates mirror DMZ's build.gradle.kts.
