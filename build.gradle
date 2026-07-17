@@ -268,3 +268,29 @@ tasks.named('test', Test).configure {
 }
 
 
+
+// --- CurseForge publishing (net.darkhax.curseforgegradle) ---
+// Run with:  ./gradlew build publishCurseForge   (CURSEFORGE_API_TOKEN in the environment)
+// The API token is read ONLY from the environment — never hardcode it here.
+tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+    dependsOn tasks.named('build')
+
+    apiToken = System.getenv('CURSEFORGE_API_TOKEN')
+
+    // Project 1613382 = DMZ Plus AE2
+    def mainFile = upload('1613382', jar)
+    mainFile.releaseType = 'beta'
+    mainFile.displayName = "DMZ Plus AE2 ${mod_version}"
+    mainFile.addModLoader('Forge')
+    mainFile.addGameVersion('1.20.1')
+    mainFile.addJavaVersion('Java 17')
+    mainFile.addEnvironment('Client', 'Server')
+    mainFile.addRequirement('dragonminez')
+    mainFile.addRequirement('applied-energistics-2')
+    mainFile.changelogType = 'markdown'
+    mainFile.changelog = '''**Beta 0.0.1 — first release**
+
+- **Meteorite exclusion:** AE2 meteorites are vetoed within a configurable radius (`compat.exclusionChunks`, default 4 chunks) of every DragonMineZ planned unique structure site, so a crater can never destroy a one-of-a-kind landmark.
+
+Requires **DragonMineZ 2.1.1+** and **Applied Energistics 2 15.x** on Minecraft 1.20.1 (Forge).'''
+}
