@@ -1,0 +1,37 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+# Files from Forge MDK
+forge*changelog.txt
+
+# Local mod dependencies (large jars, not tracked)
+libs/
+
+# superpowers specs/plans — local-only working docs, not committed
+docs/superpowers/
+
+# superpowers working dir — local-only
+.superpowers/
+
+# Claude collaboration notes — local only, not repo content
+CLAUDE.md

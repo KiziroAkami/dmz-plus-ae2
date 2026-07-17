@@ -1,0 +1,47 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/KiziroAkami/dmz-plus-ae2/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://github.com/KiziroAkami/dmz-plus-ae2"
+credits="A DragonMineZ x Applied Energistics 2 bridge, from the DMZ Plus family."
+authors="${mod_authors}"
+description='''${mod_description}'''
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# DragonMineZ — source of the unique-structure plan this mod protects.
+[[dependencies.${mod_id}]]
+    modId="dragonminez"
+    mandatory=true
+    versionRange="[2.1.1,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Applied Energistics 2 — whose meteorites we politely redirect.
+[[dependencies.${mod_id}]]
+    modId="ae2"
+    mandatory=true
+    versionRange="[15,16)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Mixin configs bundled by this mod.
+[[mixins]]
+    config="dmzplusae2.mixins.json"
