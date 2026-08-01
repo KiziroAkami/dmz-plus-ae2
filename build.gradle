@@ -288,9 +288,21 @@ tasks.register('publishCurseForge', net.darkhax.curseforgegradle.TaskPublishCurs
     mainFile.addRequirement('dragonminez')
     mainFile.addRequirement('applied-energistics-2')
     mainFile.changelogType = 'markdown'
-    mainFile.changelog = '''**Beta 0.0.1 — first release**
+    mainFile.changelog = '''## 0.0.1b - 2026-08-01
+
+### Fixed
+
+- Installing this mod alongside **DragonMineZ 2.1.1b** no longer crashes world generation. The mod reads a structure-plan API that DragonMineZ only added in 2.1.2, but the declared dependency floor accepted 2.1.1b, so generating a chunk threw `NoSuchMethodError`. The floor is now 2.1.2.
+
+### Changed
+
+- The DragonMineZ requirement is stated as 2.1.2+ instead of 2.1.1+, which is what it always actually was.
+
+**If you are on DragonMineZ 2.1.1b, update DragonMineZ.** Forge will now tell you the version is too old instead of letting the pack load and fail during generation.
+
+## 0.0.1 - first release
 
 - **Meteorite exclusion:** AE2 meteorites are vetoed within a configurable radius (`compat.exclusionChunks`, default 4 chunks) of every DragonMineZ planned unique structure site, so a crater can never destroy a one-of-a-kind landmark.
 
-Requires **DragonMineZ 2.1.1+** and **Applied Energistics 2 15.x** on Minecraft 1.20.1 (Forge).'''
+Requires **DragonMineZ 2.1.2+** and **Applied Energistics 2 15.x** on Minecraft 1.20.1 (Forge).'''
 }

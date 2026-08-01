@@ -35,3 +35,6 @@ docs/superpowers/
 
 # Claude collaboration notes — local only, not repo content
 CLAUDE.md
+
+# Local build wrapper (hardcodes this machine's JDK path and checkout location)
+gw.bat

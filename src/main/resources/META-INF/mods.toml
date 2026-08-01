@@ -30,7 +30,11 @@ description='''${mod_description}'''
 [[dependencies.${mod_id}]]
     modId="dragonminez"
     mandatory=true
-    versionRange="[2.1.1,)"
+    # 2.1.2 is the floor, not 2.1.1: DmzPlanLookup calls
+    # StructureSpawnPlanner.publishedPositions(ServerLevel), which does not exist before
+    # 2.1.2. Maven ranges sort "2.1.1b" AFTER "2.1.1", so "[2.1.1,)" admitted the one
+    # published DMZ build that lacks the method, crashing chunk generation. (#278)
+    versionRange="[2.1.2,)"
     ordering="AFTER"
     side="BOTH"
 

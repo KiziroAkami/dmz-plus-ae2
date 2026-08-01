@@ -13,7 +13,7 @@ for Minecraft 1.20.1 (Forge). Part of the [DMZ Plus](https://github.com/KiziroAk
 ## Requirements
 
 - Minecraft 1.20.1, Forge 47+
-- DragonMineZ 2.1.1+
+- DragonMineZ 2.1.2+
 - Applied Energistics 2 15.x
 
 ## License

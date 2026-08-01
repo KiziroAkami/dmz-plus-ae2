@@ -17,7 +17,7 @@ DragonMineZ places its one-of-a-kind structures (Goku's House, the Cell Arena, B
 ## Requirements
 
 *   Minecraft 1.20.1 (Forge 47+)
-*   DragonMineZ 2.1.1+
+*   DragonMineZ 2.1.2+
 *   Applied Energistics 2 15.x
 
 More DragonMineZ × AE2 integration is planned — suggestions welcome on the [issue tracker](https://github.com/KiziroAkami/dmz-plus-ae2/issues).
